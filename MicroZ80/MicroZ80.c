@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	UBYTE *bSnapshot, *bData;
 	snapVersion snapVer;
 
-	printf("MinnaMicroZ80 v0.21 - The Z80 Snapshot to Microdrive Converter\n\n");
+	printf("MinnaMicroZ80 v0.22 - The Z80 Snapshot to Microdrive Converter\n\n");
 	//printf("THIS IS A DEBUG VERSION - DO NOT DISTRIBUTE!!!!111one1one!11eleven\n\n");
 	//printf("depack48 size: %u, struct size: %u\n", depack48_size, (unsigned int)sizeof(depackCode48));
 	//printf("depack128 size: %u, struct size: %u\n", depack128_size, (unsigned int)sizeof(depackCode128));
@@ -137,22 +137,22 @@ int main(int argc, char *argv[])
 				{
 					if (ulTotal > MAXSNAP128TOTAL)
 					{
+						printf("*****************************\n");
+						printf("WARNING!!!! SNAPSHOT TOO BIG!\n");
+						printf("*****************************\n");
+						printf("This snapshot exceeds the Microdrive size limit of %i and may not fit! :(\n", MAXSNAP128TOTAL);
+					}
+					
+					if ((spOneTwoEight.CompTwoLength > MAXSNAP128SIZE) || (spOneTwoEight.CompThreeLength > MAXSNAP128SIZE))
+					{
 						printf("SNAPSHOT TOO BIG!\n");
-						printf("Unfortunately any snapshot segment that fails to compress down to %i won't fit on a Microdrive :(\n", MAXSNAP128TOTAL);
+						printf("Unfortunately any snapshot segment that fails to compress down to %i won't leave room for the decompression code :(\n", MAXSNAP128SIZE);
 					}
 					else
 					{
-						if ((spOneTwoEight.CompTwoLength > MAXSNAP128SIZE) || (spOneTwoEight.CompThreeLength > MAXSNAP128SIZE))
-						{
-							printf("SNAPSHOT TOO BIG!\n");
-							printf("Unfortunately any snapshot segment that fails to compress down to %i won't leave room for the decompression code :(\n", MAXSNAP128SIZE);
-						}
-						else
-						{
-							printf("Writing TZX file...\n");
-							writeTZXFile128(argv[1], argv[2], &spOneTwoEight);
-							printf("TZX created, now copy the files inside it straight onto a real Microdrive equipped Speccy along with the launcher!\n");
-						}
+						printf("Writing TZX file...\n");
+						writeTZXFile128(argv[1], argv[2], &spOneTwoEight);
+						printf("TZX created, now copy the files inside it straight onto a real Microdrive equipped Speccy along with the launcher!\n");
 					}
 				}
 			}
