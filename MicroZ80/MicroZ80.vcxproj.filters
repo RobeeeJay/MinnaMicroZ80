@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\MegaLZ">
+      <UniqueIdentifier>{e542df94-28ff-4763-943f-11672cac207d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MegaLZ">
+      <UniqueIdentifier>{cac9af37-6e25-429f-a5fb-cb74749f93f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="snapshot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MegaLZ_emit.h">
+      <Filter>Header Files\MegaLZ</Filter>
+    </ClInclude>
+    <ClInclude Include="MegaLZ_globals.h">
+      <Filter>Header Files\MegaLZ</Filter>
+    </ClInclude>
+    <ClInclude Include="MegaLZ_hash.h">
+      <Filter>Header Files\MegaLZ</Filter>
+    </ClInclude>
+    <ClInclude Include="MegaLZ_lz.h">
+      <Filter>Header Files\MegaLZ</Filter>
+    </ClInclude>
+    <ClInclude Include="MegaLZ_pack.h">
+      <Filter>Header Files\MegaLZ</Filter>
+    </ClInclude>
+    <ClInclude Include="MegaLZ_twobyters.h">
+      <Filter>Header Files\MegaLZ</Filter>
+    </ClInclude>
+    <ClInclude Include="MegaLZ_types.h">
+      <Filter>Header Files\MegaLZ</Filter>
+    </ClInclude>
+    <ClInclude Include="z80_48code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="z80_128code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MicroZ80.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MegaLZ_pack.c">
+      <Filter>Source Files\MegaLZ</Filter>
+    </ClCompile>
+    <ClCompile Include="MegaLZ_emit.c">
+      <Filter>Source Files\MegaLZ</Filter>
+    </ClCompile>
+    <ClCompile Include="MegaLZ_hash.c">
+      <Filter>Source Files\MegaLZ</Filter>
+    </ClCompile>
+    <ClCompile Include="MegaLZ_lz.c">
+      <Filter>Source Files\MegaLZ</Filter>
+    </ClCompile>
+    <ClCompile Include="MegaLZ_twobyters.c">
+      <Filter>Source Files\MegaLZ</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
